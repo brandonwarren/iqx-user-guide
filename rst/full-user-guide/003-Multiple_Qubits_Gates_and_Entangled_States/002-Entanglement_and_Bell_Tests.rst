@@ -22,7 +22,7 @@ that there must be correlations that are beyond classical. 
   \ `Abner Shimony <https://en.wikipedia.org/wiki/Abner_Shimony>`__\ ,
   and \ `Richard
   Holt <https://en.wikipedia.org/w/index.php?title=Richard_Holt_%28physicist%29&action=edit&redlink=1>`__\ 
-  derived the following CHSH inequality :math:`|\mathrm{C}|\leq 2` where
+   derived the following CHSH inequality :math:`|\mathrm{C}|\leq 2` where
 
                          |image1|
 
@@ -37,7 +37,7 @@ correlation of -1 means both observables have odd parity.
 It is simple to show that this inequality must be true if the theory
 obeys the following two assumptions, *locality* and *realism*:
 
-**               Locality**\ : No information can travel faster than the
+              **Locality**: No information can travel faster than the
 speed of light. There is a hidden variable :math:`\lambda` that defines all
 the correlations so that
 
@@ -163,7 +163,7 @@ above equation. 
   in a similar way as before; it should be close to :math:`1/\sqrt{2}`.
 
 Finally, in the third and fourth experiment, the correlators :math:`\langle
-XW\rangle` and :math:`\langle XV\rangle ` are measured, and should be
+XW\rangle` and :math:`\langle XV\rangle` are measured, and should be
 close to :math:`1/\sqrt{2}` and :math:`-1/\sqrt{2}` respectively. The :math:`W`
 and :math:`V` measurement are performed the same way as above, and the :math:`X`
 via a Hadamard gate before a standard measurement. 
