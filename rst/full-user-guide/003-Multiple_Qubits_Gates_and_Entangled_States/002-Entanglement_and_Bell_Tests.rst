@@ -219,10 +219,10 @@ both ideal and realistic parameters). 
 
 
 .. |image0| image:: https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/p7ywz1fvomuhxgvi.png?raw=true
-.. |image1| image:: https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/26fjth9ka5nah5mi.png?raw=true
+.. |image1| image:: https://github.com/brandonwarren/iqx-user-guide/blob/format/images/images-classroom/26fjth9ka5nah5mj.png?raw=true
 .. |image2| image:: https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/h9cbwavb76uyds4i.png?raw=true
 .. |image3| image:: https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/6dngnqakg0wo2yb9.png?raw=true
-.. |image4| image:: https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/xpufzfh3hxagu8fr.png?raw=true
+.. |image4| image:: https://github.com/brandonwarren/iqx-user-guide/blob/format/images/images-classroom/xpufzfh3hxagu8fs.png?raw=true
 .. |image5| image:: https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/ggfwizai6qen4s4i.png?raw=true
 .. |image6| image:: https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/o3gyvxtqqepzaor.png?raw=true
 .. |image7| image:: https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/j7c275k02qyf1or.png?raw=true
