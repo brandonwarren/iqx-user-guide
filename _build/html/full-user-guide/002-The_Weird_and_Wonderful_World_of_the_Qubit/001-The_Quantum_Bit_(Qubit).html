@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../../_static/theme.css" type="text/css" /> 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <meta charset="utf-8" />
+    <title>The Quantum Bit (Qubit) &#8212; Experience Documentation 2.0 documentation</title>
+<link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../../',
+        VERSION: '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../../_static/jquery.js"></script>
+<script type="text/javascript" src="../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../_static/language_data.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Creating Superpositions" href="002-Creating_superpositions.html" />
+    <link rel="prev" title="The Weird and Wonderful World of the Qubit" href="000-The_Weird_and_Wonderful_World_of_the_Qubit.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+
+    <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/plex-font-faces.css" type="text/css" />
+
+</head>
+
+<body>    <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/ibm-q.png"></span>
+          Experience Documentation</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../beginners-guide/introduction.html">Beginners Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">User Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="000-The_Weird_and_Wonderful_World_of_the_Qubit.html" title="Previous Chapter: The Weird and Wonderful World of the Qubit"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="002-Creating_superpositions.html" title="Next Chapter: Creating Superpositions"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div> 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 breadcrumbs">
+        <ol class="breadcrumb"><li><a href="../introduction.html">User Guide</a></li><li><a href="000-The_Weird_and_Wonderful_World_of_the_Qubit.html">The Weird and Wonderful World of the Qubit</a></li><li class="active">The Quantum Bit (Qubit)</li>
+        </ol>
+        </div>
+    </div>
+    <div class="row">
+<div class="col-md-3">
+    <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">The Quantum Bit (Qubit)</a></li>
+</ul>
+
+  <li>
+    <a href="000-The_Weird_and_Wonderful_World_of_the_Qubit.html" title="Previous Chapter: The Weird and Wonderful World of the Qubit"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="002-Creating_superpositions.html" title="Next Chapter: Creating Superpositions"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/full-user-guide/002-The_Weird_and_Wonderful_World_of_the_Qubit/001-The_Quantum_Bit_(Qubit).rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+    </div>
+</div>
+        <div class="col-md-9 content">
+            
+  <div class="section" id="the-quantum-bit-qubit">
+<h1>The Quantum Bit (Qubit)<a class="headerlink" href="#the-quantum-bit-qubit" title="Permalink to this headline">¶</a></h1>
+<p>In this section you will meet the qubit. You will also see a bit of
+mathematical notation, including some concepts from linear algebra.
+A qubit is a quantum system consisting of two levels, labeled
+<span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> (here we are using Dirac’s bra-ket
+notation). It is represented by a two-dimensional vector space over
+the complex numbers <span class="math notranslate nohighlight">\(\mathbb{C}^2\)</span>. This means that a qubit takes
+two complex numbers to fully describe it. The computational (or
+standard) basis corresponds to the two levels <span class="math notranslate nohighlight">\(|0\rangle\)</span> and
+<span class="math notranslate nohighlight">\(|1\rangle\)</span>, which correspond to the following vectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~|0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix} ~~~~ |1\rangle =\begin{pmatrix} 0 \\ 1 \end{pmatrix}\end{split}\]</div>
+<p>The qubit does not always have to be in either <span class="math notranslate nohighlight">\(|0\rangle\)</span> or
+<span class="math notranslate nohighlight">\(|1\rangle\)</span>; it can be in an arbitrary quantum state, denoted
+<span class="math notranslate nohighlight">\(|\psi\rangle\)</span>, which can be any <em>superposition</em>
+<span class="math notranslate nohighlight">\(|\psi\rangle=\alpha |0\rangle + \beta |1\rangle\)</span> of the
+basis vectors. The superposition quantities <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>
+are complex numbers; together they obey
+<span class="math notranslate nohighlight">\(|\alpha|^2+|\beta|^2=1\)</span>.</p>
+<p>Interesting things happen when quantum systems are measured, or
+observed. Quantum measurement is described by the <a class="reference external" href="https://en.wikipedia.org/wiki/Born_rule">Born
+rule</a>. In particular, if a
+qubit in some state <span class="math notranslate nohighlight">\(|\psi\rangle\)</span> is measured in the standard
+basis, the result <strong>0</strong> is obtained with probability
+<span class="math notranslate nohighlight">\(|\alpha|^2\)</span>, and the result <strong>1</strong> is obtained with the
+complementary probability <span class="math notranslate nohighlight">\(|\beta|^2\)</span>. Interestingly, a quantum
+measurement takes any superposition state of the qubit, and projects
+it to either the state <span class="math notranslate nohighlight">\(|0\rangle\)</span> or the state <span class="math notranslate nohighlight">\(|1\rangle\)</span>,
+with a probability determined from the parameters of the
+superposition.</p>
+<p>What we have described here is the abstract notion of a qubit. The
+prototype quantum computer you interact with in the IBM Q
+Experience uses a physical type of qubit called a <em>superconducting
+transmon qubit</em>, which is made from superconducting materials such as
+niobium and aluminum, patterned on a silicon substrate. Physically, for this
+superconducting qubit to behave as the abstract
+notion of the qubit, the device must be at drastically low
+temperatures. In the IBM Quantum Lab, we keep the temperature so cold
+(15 milliKelvin in a dilution refrigerator) that there is no ambient
+noise or heat to excite the superconducting qubit. Once our system has
+gotten cold enough, which takes several days, the superconducting
+qubit reaches equilibrium at the ground state <span class="math notranslate nohighlight">\(|0\rangle\)</span>.</p>
+<p>To get a sense for what “ground state” means, try running the first
+score file below in simulation mode (or look at some cached runs on the
+real device). Here, the qubit is initially prepared in the ground state
+<span class="math notranslate nohighlight">\(|0\rangle\)</span>, then is followed by the standard measurement. From your
+execution results, you should find in the simulation mode (and with very high
+probability for runs using the real device) that the qubit is still in the ground
+state. Any errors in the real device are due to imperfect measurements and/or residual heating of the qubit.</p>
+<p><strong>Single-Qubit Measurement</strong></p>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Single Q Measurement</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># single_q_measurement.py</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">Aer</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuit</span>
+<span class="n">single_q_measurement</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">single_q_measurement</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+ 
+<span class="c1"># Execute the circuit</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">single_q_measurement</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Print the result</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">single_q_measurement</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+<p>As you may have guessed, we need to be able to put the qubit in other states.
+To do this, we require the concept of a <em>quantum gate</em>.  A single-qubit quantum gate
+is a <span class="math notranslate nohighlight">\(2 \times 2\)</span> <a class="reference external" href="https://en.wikipedia.org/wiki/Unitary_matrix">unitary matrix</a>
+(since quantum gates must be reversible and preserve probability
+amplitudes, the matrices must be unitary). The quantum state <span class="math notranslate nohighlight">\(|\psi'\rangle\)</span>
+after the action of the gate is found by multiplying the
+original quantum state by the gate <span class="math notranslate nohighlight">\(|\psi'\rangle=U|\psi\rangle\)</span>. Here
+<span class="math notranslate nohighlight">\(U\)</span> represents the gate.</p>
+<p>The simplest quantum gate is the bit-flip gate, which we denote by <span class="math notranslate nohighlight">\(X\)</span>. It takes
+<span class="math notranslate nohighlight">\(|0\rangle\rightarrow X|0\rangle=|1\rangle\)</span>; in other words, it flips the zero
+to a one, or vice versa. This is similar to a classical NOT gate and has a matrix
+representation of</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~X =\begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}.\end{split}\]</div>
+<p>In the Composer it is given by a green gate with a X in the middle (see the example
+score file below). Try running it. Did you find that, unlike in the
+example above, the qubit ended up in the excited state <span class="math notranslate nohighlight">\(|1\rangle\)</span>
+(with high probability if you used the real device)?</p>
+<p><strong>Excited State</strong></p>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Excited State</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">x</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># excited_state.py</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">Aer</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuit</span>
+<span class="n">excited_state</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">excited_state</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">excited_state</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuit</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">excited_state</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Print the result</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">excited_state</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+
+
+        </div>
+          
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right">
+            <a href="#">Back to top</a> 
+        </p>
+        <p> &copy;
+            Copyright 2017, IBM Research and the IBM QX team.<br/> Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+        </p>
+    </div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../../_static/theme.css" type="text/css" /> 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <meta charset="utf-8" />
+    <title>Decoherence &#8212; Experience Documentation 2.0 documentation</title>
+<link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../../',
+        VERSION: '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../../_static/jquery.js"></script>
+<script type="text/javascript" src="../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../_static/language_data.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Multiple Qubits, Gates, and Entangled States" href="../003-Multiple_Qubits_Gates_and_Entangled_States/000-Multiple_Qubits_Gates_and_Entangled_States.html" />
+    <link rel="prev" title="The Bloch Sphere" href="005-The_Bloch_Sphere.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+
+    <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/plex-font-faces.css" type="text/css" />
+
+</head>
+
+<body>    <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/ibm-q.png"></span>
+          Experience Documentation</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../beginners-guide/introduction.html">Beginners Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">User Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="005-The_Bloch_Sphere.html" title="Previous Chapter: The Bloch Sphere"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="../003-Multiple_Qubits_Gates_and_Entangled_States/000-Multiple_Qubits_Gates_and_Entangled_States.html" title="Next Chapter: Multiple Qubits, Gates, and Entangled States"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div> 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 breadcrumbs">
+        <ol class="breadcrumb"><li><a href="../introduction.html">User Guide</a></li><li><a href="000-The_Weird_and_Wonderful_World_of_the_Qubit.html">The Weird and Wonderful World of the Qubit</a></li><li class="active">Decoherence</li>
+        </ol>
+        </div>
+    </div>
+    <div class="row">
+<div class="col-md-3">
+    <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Decoherence</a><ul>
+<li><a class="reference internal" href="#energy-relaxation-and-t-1">Energy relaxation and <span class="math notranslate nohighlight">\(T_1\)</span></a></li>
+<li><a class="reference internal" href="#dephasing-and-t-2">Dephasing and <span class="math notranslate nohighlight">\(T_2\)</span></a></li>
+<li><a class="reference internal" href="#progress-in-decoherence-with-superconducting-qubits">Progress in decoherence with superconducting qubits</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="005-The_Bloch_Sphere.html" title="Previous Chapter: The Bloch Sphere"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="../003-Multiple_Qubits_Gates_and_Entangled_States/000-Multiple_Qubits_Gates_and_Entangled_States.html" title="Next Chapter: Multiple Qubits, Gates, and Entangled States"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/full-user-guide/002-The_Weird_and_Wonderful_World_of_the_Qubit/006-Decoherence.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+    </div>
+</div>
+        <div class="col-md-9 content">
+            
+  <div class="section" id="decoherence">
+<h1>Decoherence<a class="headerlink" href="#decoherence" title="Permalink to this headline">¶</a></h1>
+<p>Real quantum computers must deal with <a class="reference external" href="https://en.wikipedia.org/wiki/Quantum_decoherence">decoherence</a>,
+or the loss of information due to environmental disturbances (noise). The Bloch vector formalism we
+introduced in the previous section is sufficient to describe the state of the system under decoherence
+processes. The <a class="reference external" href="https://en.wikipedia.org/wiki/Quantum_state#Pure_states">pure states</a> we have studied
+so far have a Bloch vector of length 1, touching the surface of the Bloch sphere,
+and can be represented in density matrix form as <span class="math notranslate nohighlight">\(\rho=| \psi\rangle \langle \psi |\)</span>.
+Decoherence causes a change in our quantum states from pure to
+<a class="reference external" href="https://en.wikipedia.org/wiki/Quantum_state#Mixed_states">mixed states</a>,
+which have a <a class="reference external" href="https://en.wikipedia.org/wiki/Density_matrix">density matrix</a> <span class="math notranslate nohighlight">\(\rho\)</span>
+that can be written as a sum over pure states</p>
+<p><span class="math notranslate nohighlight">\(\rho = \sum_k p_k | \psi_k\rangle \langle \psi_k |\)</span></p>
+<p>and a Bloch vector that sits inside the Bloch sphere</p>
+<p><span class="math notranslate nohighlight">\(|\langle X\rangle|^2 +  |\langle Y\rangle|^2 + | \langle Z\rangle|^2 &lt; 1\)</span>.</p>
+<div class="section" id="energy-relaxation-and-t-1">
+<h2>Energy relaxation and <span class="math notranslate nohighlight">\(T_1\)</span><a class="headerlink" href="#energy-relaxation-and-t-1" title="Permalink to this headline">¶</a></h2>
+<p>One important decoherence process is called <em>energy relaxation</em>, where
+the excited <span class="math notranslate nohighlight">\(|1\rangle\)</span> state decays toward the ground state
+<span class="math notranslate nohighlight">\(|0\rangle\)</span>. The time constant of this process, <span class="math notranslate nohighlight">\(T_1\)</span>, is an
+extremely important figure-of-merit for any implementation of quantum
+computing, and one in which IBM has made great progress in recent years,
+ultimately leading to the prototype quantum computer you are now using.
+Experiment with the circuits below to see how adding many repetitions of
+additional do-nothing Idle <span class="math notranslate nohighlight">\(Id\)</span> gates (or Identity gates; these are
+gates that do nothing but wait) before measurement causes the state to
+gradually decay towards <span class="math notranslate nohighlight">\(|0\rangle\)</span>.</p>
+<p>Below is a QISKit script for measuring <span class="math notranslate nohighlight">\(T_1\)</span>.</p>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># t1.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">register</span>
+
+<span class="kn">import</span> <span class="nn">Qconfig</span>
+<span class="n">register</span><span class="p">(</span><span class="n">Qconfig</span><span class="o">.</span><span class="n">APItoken</span><span class="p">,</span> <span class="n">Qconfig</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuits</span>
+<span class="n">pre</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">meas</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">meas</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">circuits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">exp_vector</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">middle</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">45</span><span class="o">*</span><span class="n">exp_index</span><span class="p">):</span>
+        <span class="n">middle</span><span class="o">.</span><span class="n">iden</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+    <span class="n">circuits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pre</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">+</span> <span class="n">meas</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuits</span>
+<span class="n">shots</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="s1">&#39;ibmqx4&#39;</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span> <span class="n">max_credits</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Plot the result</span>
+<span class="n">exp_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">exp_error</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">circuits</span><span class="p">[</span><span class="n">exp_index</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">shots</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">exp_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p0</span><span class="p">)</span>
+    <span class="n">exp_error</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p0</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p0</span><span class="p">)</span><span class="o">/</span><span class="n">shots</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">exp_vector</span><span class="p">,</span> <span class="n">exp_data</span><span class="p">,</span> <span class="n">exp_error</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time [45*gate time]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pr(0)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="dephasing-and-t-2">
+<h2>Dephasing and <span class="math notranslate nohighlight">\(T_2\)</span><a class="headerlink" href="#dephasing-and-t-2" title="Permalink to this headline">¶</a></h2>
+<p>Dephasing is another decoherence process, and unlike energy
+relaxation, it affects only superposition states. It can be understood
+solely in a quantum setting as it has no classical analog. The time
+constant <span class="math notranslate nohighlight">\(T_2\)</span> includes the effect of dephasing as well as energy
+relaxation, and is another crucial figure-of-merit. Again, IBM has
+some of the world’s best qubits by this metric. Practice with the
+scripts below to investigate the Ramsey and echo experiments. A Ramsey experiment measures
+<span class="math notranslate nohighlight">\(T_2^*\)</span>, which can be affected by slow noise, and the echo experiment removes some of this noise.</p>
+<p>Below is a QISKit script for measuring <span class="math notranslate nohighlight">\(T_2^*\)</span> (Ramsey) and <span class="math notranslate nohighlight">\(T_2\)</span> (echo).</p>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># t2_ramsey.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">register</span>
+
+<span class="kn">import</span> <span class="nn">Qconfig</span>
+<span class="n">register</span><span class="p">(</span><span class="n">Qconfig</span><span class="o">.</span><span class="n">APItoken</span><span class="p">,</span> <span class="n">Qconfig</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuits</span>
+<span class="n">pre</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">meas_x</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">meas_x</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">meas_x</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">meas_x</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">circuits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">exp_vector</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">)</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">middle</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+    <span class="n">phase</span> <span class="o">=</span> <span class="n">phase</span> <span class="o">+</span> <span class="mi">6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">exp_vector</span><span class="p">)</span>
+    <span class="n">middle</span><span class="o">.</span><span class="n">u1</span><span class="p">(</span><span class="n">phase</span><span class="p">,</span><span class="n">q</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">exp_index</span><span class="p">):</span>
+        <span class="n">middle</span><span class="o">.</span><span class="n">iden</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+    <span class="n">circuits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pre</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">+</span> <span class="n">meas_x</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuits</span>
+<span class="n">shots</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="s1">&#39;ibmqx4&#39;</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span> <span class="n">max_credits</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Plot the result</span>
+<span class="n">exp_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">exp_error</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">circuits</span><span class="p">[</span><span class="n">exp_index</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">shots</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">exp_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p0</span><span class="p">)</span>
+    <span class="n">exp_error</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p0</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p0</span><span class="p">)</span><span class="o">/</span><span class="n">shots</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">exp_vector</span><span class="p">,</span> <span class="n">exp_data</span><span class="p">,</span> <span class="n">exp_error</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time [5*gate time]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pr(+)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># t2_echo.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">register</span>
+
+<span class="kn">import</span> <span class="nn">Qconfig</span>
+<span class="n">register</span><span class="p">(</span><span class="n">Qconfig</span><span class="o">.</span><span class="n">APItoken</span><span class="p">,</span> <span class="n">Qconfig</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuits</span>
+<span class="n">pre</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">meas_x</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">meas_x</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">meas_x</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">meas_x</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">circuits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">exp_vector</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">middle</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="o">*</span><span class="n">exp_index</span><span class="p">):</span>
+        <span class="n">middle</span><span class="o">.</span><span class="n">iden</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+    <span class="n">middle</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="o">*</span><span class="n">exp_index</span><span class="p">):</span>
+        <span class="n">middle</span><span class="o">.</span><span class="n">iden</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+    <span class="n">circuits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pre</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">+</span> <span class="n">meas_x</span><span class="p">)</span>
+
+
+<span class="c1"># Execute the circuits</span>
+<span class="n">shots</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="s1">&#39;ibmqx4&#39;</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span> <span class="n">max_credits</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Plot the result</span>
+<span class="n">exp_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">exp_error</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">circuits</span><span class="p">[</span><span class="n">exp_index</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">shots</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">exp_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p0</span><span class="p">)</span>
+    <span class="n">exp_error</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p0</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p0</span><span class="p">)</span><span class="o">/</span><span class="n">shots</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">exp_vector</span><span class="p">,</span> <span class="n">exp_data</span><span class="p">,</span> <span class="n">exp_error</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time [31*gate time]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pr(+)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="progress-in-decoherence-with-superconducting-qubits">
+<h2>Progress in decoherence with superconducting qubits<a class="headerlink" href="#progress-in-decoherence-with-superconducting-qubits" title="Permalink to this headline">¶</a></h2>
+<p>Because <span class="math notranslate nohighlight">\(T_2\)</span> is such an important quantity, it is interesting to
+chart how far the community of superconducting qubits has come over
+the years. Here is a graph depicting <span class="math notranslate nohighlight">\(T_2\)</span> versus time.</p>
+<p><img alt="image0" src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/T2h1lc19xmqrdlsor.png?raw=true" /></p>
+</div>
+</div>
+
+
+        </div>
+          
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right">
+            <a href="#">Back to top</a> 
+        </p>
+        <p> &copy;
+            Copyright 2017, IBM Research and the IBM QX team.<br/> Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+        </p>
+    </div>
+</footer>
+</body>
+
+</html>

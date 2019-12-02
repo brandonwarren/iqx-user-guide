@@ -1,5 +1,6 @@
 
-_build/html/*
+# save html, so we can use github as temp server of user's guide
+# _build/html/*
 
 _build/doctrees/*
 qiskit/bin/activate

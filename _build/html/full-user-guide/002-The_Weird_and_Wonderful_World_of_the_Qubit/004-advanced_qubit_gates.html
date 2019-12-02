@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../../_static/theme.css" type="text/css" /> 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <meta charset="utf-8" />
+    <title>Advanced Single-Qubit Gates &#8212; Experience Documentation 2.0 documentation</title>
+<link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../../',
+        VERSION: '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../../_static/jquery.js"></script>
+<script type="text/javascript" src="../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../_static/language_data.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The Bloch Sphere" href="005-The_Bloch_Sphere.html" />
+    <link rel="prev" title="Introducing Qubit Phase" href="003-Introducing_qubit_phase.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+
+    <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/plex-font-faces.css" type="text/css" />
+
+</head>
+
+<body>    <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/ibm-q.png"></span>
+          Experience Documentation</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../beginners-guide/introduction.html">Beginners Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">User Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="003-Introducing_qubit_phase.html" title="Previous Chapter: Introducing Qubit Phase"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="005-The_Bloch_Sphere.html" title="Next Chapter: The Bloch Sphere"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div> 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 breadcrumbs">
+        <ol class="breadcrumb"><li><a href="../introduction.html">User Guide</a></li><li><a href="000-The_Weird_and_Wonderful_World_of_the_Qubit.html">The Weird and Wonderful World of the Qubit</a></li><li class="active">Advanced Single-Qubit Gates</li>
+        </ol>
+        </div>
+    </div>
+    <div class="row">
+<div class="col-md-3">
+    <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Advanced Single-Qubit Gates</a></li>
+</ul>
+
+  <li>
+    <a href="003-Introducing_qubit_phase.html" title="Previous Chapter: Introducing Qubit Phase"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="005-The_Bloch_Sphere.html" title="Next Chapter: The Bloch Sphere"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/full-user-guide/002-The_Weird_and_Wonderful_World_of_the_Qubit/004-advanced_qubit_gates.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+    </div>
+</div>
+        <div class="col-md-9 content">
+            
+  <div class="section" id="advanced-single-qubit-gates">
+<h1>Advanced Single-Qubit Gates<a class="headerlink" href="#advanced-single-qubit-gates" title="Permalink to this headline">¶</a></h1>
+<p>We are ready to check the advanced box! Find it above the list of gates in the Composer.
+When you check it, three orange gates <span class="math notranslate nohighlight">\(\{u1,u2,u3\}\)</span> appear. These are the three physical single-qubit
+gates of the IBM Q Experience which take in one, two, and three parameters respectively.
+These are the main single-qubit gates; the others we have mentioned are
+just special cases of these.</p>
+<p>Another convenient representation of a single-qubit state is</p>
+<div class="math notranslate nohighlight">
+\[~~~~~~~~|\psi\rangle = \cos(\theta/2)|0\rangle + \sin(\theta/2)e^{i\phi}|1\rangle,\]</div>
+<p>where <span class="math notranslate nohighlight">\(0 \leq \phi &lt;2\pi\)</span> and <span class="math notranslate nohighlight">\(0\leq \theta \leq \pi\)</span>. This demonstrated a
+one-to-one correspondence between qubit states (<span class="math notranslate nohighlight">\(\mathbb{C}^2\)</span>) and the points on the
+surface of a unit sphere (<span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>). This is called the Bloch sphere representation of a qubit state
+(which will be discussed later).</p>
+<p>As mentioned before, single-qubit gates are represented by a <span class="math notranslate nohighlight">\(2\times 2\)</span> unitary matrix <span class="math notranslate nohighlight">\(U\)</span>.
+The action of the quantum gate is found by multiplying the matrix representing the gate with
+the vector representing the quantum state.</p>
+<div class="math notranslate nohighlight">
+\[~~~~~~~~|\psi'\rangle = U|\psi\rangle\]</div>
+<p>A general unitary must be able to take the <span class="math notranslate nohighlight">\(|0\rangle\)</span> to the above state and <span class="math notranslate nohighlight">\(U^\dagger U = I\)</span>.
+That is,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~U = \begin{pmatrix} \cos(\theta/2) &amp; -e^{i\lambda}\sin(\theta/2) \\ e^{i\phi}\sin(\theta/2)
+&amp; e^{i\lambda+i\phi}\cos(\theta/2) \end{pmatrix}.\end{split}\]</div>
+<p>This is the most general form of a single-qubit unitary.</p>
+<p>The first physical gate, <span class="math notranslate nohighlight">\(u1\)</span>, is the phase gate, and is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~u1(\lambda) = U(0,0,\lambda) = \begin{pmatrix} 1 &amp; 0 \\ 0
+&amp; e^{i\lambda} \end{pmatrix}.\end{split}\]</div>
+<p>This gate allows us to program a continuous quantum phase <span class="math notranslate nohighlight">\(\lambda\)</span>. In previous sections the <span class="math notranslate nohighlight">\(T\)</span>,
+<span class="math notranslate nohighlight">\(T^\dagger\)</span>, <span class="math notranslate nohighlight">\(S\)</span>, <span class="math notranslate nohighlight">\(S^\dagger\)</span>, and <span class="math notranslate nohighlight">\(Z\)</span> are made using this gate. In the IBM Q Experience,
+this is implemented as a frame change, and takes zero time.</p>
+<p>The second gate is <span class="math notranslate nohighlight">\(u2\)</span>, which has the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~u2(\phi,\lambda) = U(\pi/2,\phi,\lambda) = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 &amp; -e^{i\lambda} \\ e^{i\phi}
+&amp; e^{i\lambda+i\phi} \end{pmatrix}.\end{split}\]</div>
+<p>From this gate, the Hadamard is done by <span class="math notranslate nohighlight">\(H= U_2(0,\pi)\)</span>.  In the IBM Q Experience,
+this is implemented by a pre- and post-frame change and a <span class="math notranslate nohighlight">\(X_{\pi/2}\)</span> pulse.</p>
+<p>The third gate is <span class="math notranslate nohighlight">\(u3\)</span>, which is just <span class="math notranslate nohighlight">\(u3(\theta,\phi,\lambda) = U(\theta,\phi,\lambda)\)</span>; it is
+implemented using three frame changes and two <span class="math notranslate nohighlight">\(X_{\pi/2}\)</span> pulses. A demonstration of the <span class="math notranslate nohighlight">\(u3\)</span> gate is shown
+in the script below. It illustrates how we can use the <span class="math notranslate nohighlight">\(u3\)</span> gate to create an arbitrary state, and the plot shows
+the projection onto the <span class="math notranslate nohighlight">\(|0\rangle\)</span>. A similar thing can be done with <span class="math notranslate nohighlight">\(u1\)</span> and <span class="math notranslate nohighlight">\(u2\)</span>.</p>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># example_u3.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">Aer</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuits</span>
+<span class="n">circuits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">middle</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">meas</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">meas</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">meas</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">exp_vector</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">exp_theta</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">delta_theta</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">exp_vector</span><span class="p">)</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">+</span> <span class="n">delta_theta</span>
+    <span class="n">exp_theta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">middle</span><span class="o">.</span><span class="n">u3</span><span class="p">(</span><span class="n">delta_theta</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">q</span><span class="p">)</span>
+    <span class="n">circuits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">middle</span> <span class="o">+</span> <span class="n">meas</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuits</span>
+<span class="n">shots</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span> <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Plot the result</span>
+<span class="n">exp_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">exp_error</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">circuits</span><span class="p">[</span><span class="n">exp_index</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">shots</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">exp_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p0</span><span class="p">)</span>
+    <span class="n">exp_error</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p0</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p0</span><span class="p">)</span><span class="o">/</span><span class="n">shots</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">exp_theta</span><span class="p">,</span> <span class="n">exp_data</span><span class="p">,</span> <span class="n">exp_error</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;theta&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pr(0)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+
+
+        </div>
+          
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right">
+            <a href="#">Back to top</a> 
+        </p>
+        <p> &copy;
+            Copyright 2017, IBM Research and the IBM QX team.<br/> Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+        </p>
+    </div>
+</footer>
+</body>
+
+</html>

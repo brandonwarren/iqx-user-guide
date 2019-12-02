@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../../_static/theme.css" type="text/css" /> 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <meta charset="utf-8" />
+    <title>Introducing Qubit Phase &#8212; Experience Documentation 2.0 documentation</title>
+<link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../../',
+        VERSION: '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../../_static/jquery.js"></script>
+<script type="text/javascript" src="../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../_static/language_data.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Advanced Single-Qubit Gates" href="004-advanced_qubit_gates.html" />
+    <link rel="prev" title="Creating Superpositions" href="002-Creating_superpositions.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+
+    <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/plex-font-faces.css" type="text/css" />
+
+</head>
+
+<body>    <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/ibm-q.png"></span>
+          Experience Documentation</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../beginners-guide/introduction.html">Beginners Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">User Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="002-Creating_superpositions.html" title="Previous Chapter: Creating Superpositions"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="004-advanced_qubit_gates.html" title="Next Chapter: Advanced Single-Qubit Gates"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div> 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 breadcrumbs">
+        <ol class="breadcrumb"><li><a href="../introduction.html">User Guide</a></li><li><a href="000-The_Weird_and_Wonderful_World_of_the_Qubit.html">The Weird and Wonderful World of the Qubit</a></li><li class="active">Introducing Qubit Phase</li>
+        </ol>
+        </div>
+    </div>
+    <div class="row">
+<div class="col-md-3">
+    <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Introducing Qubit Phase</a></li>
+</ul>
+
+  <li>
+    <a href="002-Creating_superpositions.html" title="Previous Chapter: Creating Superpositions"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="004-advanced_qubit_gates.html" title="Next Chapter: Advanced Single-Qubit Gates"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/full-user-guide/002-The_Weird_and_Wonderful_World_of_the_Qubit/003-Introducing_qubit_phase.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+    </div>
+</div>
+        <div class="col-md-9 content">
+            
+  <div class="section" id="introducing-qubit-phase">
+<h1>Introducing Qubit Phase<a class="headerlink" href="#introducing-qubit-phase" title="Permalink to this headline">¶</a></h1>
+<p>In the last two sections we covered the bit-flip and the Hadamard gate.
+These allow us to to make the single-qubit quantum states
+<span class="math notranslate nohighlight">\(\{|0\rangle, |1\rangle, |+\rangle, |-\rangle\}\)</span>, and have introduced us
+to quantum superpositions. However, a general
+single-qubit quantum state has even richer qualities. As we have already mentioned, a
+single-qubit quantum state can be written as
+<span class="math notranslate nohighlight">\(|\psi\rangle=\alpha |0\rangle + \beta |1\rangle\)</span>, where
+<span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>
+are complex numbers with the probability constraint
+<span class="math notranslate nohighlight">\(|\alpha|^2+|\beta|^2=1\)</span>. Furthermore, the global phase of a quantum
+state is not detectable; therefore, <span class="math notranslate nohighlight">\(|\psi\rangle\)</span> is the same as
+<span class="math notranslate nohighlight">\(e^{i\gamma}|\psi\rangle\)</span>.</p>
+<p>An alternative representation of a single-qubit state that incorporates both of
+these constraints can be written as</p>
+<div class="math notranslate nohighlight">
+\[~~~~~~~~|\psi\rangle = \sqrt{p}|0\rangle + e^{i\phi} \sqrt{1-p} |1\rangle,\]</div>
+<p>where <span class="math notranslate nohighlight">\(0 \leq p \leq 1\)</span> is the probability of the bit being in the 0 state, and <span class="math notranslate nohighlight">\(0\leq \phi &lt; 2\pi\)</span> is
+the quantum phase. The set
+of quantum gates, generated by <span class="math notranslate nohighlight">\(\{H,T\}\)</span>, makes it possible to reach all different
+values of <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>. In the later sections we will
+show how this can be done in principle, and introduce the advanced gates
+in the IBM Q Experience to give finer control.  First, however, we would like
+to develop an intuition for quantum phase by examining the <span class="math notranslate nohighlight">\(T\)</span> gate.
+The <span class="math notranslate nohighlight">\(T\)</span> gate applies a
+phase of <span class="math notranslate nohighlight">\(\pi/4\)</span>, and has a matrix representation of</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~T =\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; e^{i\pi/4} \end{pmatrix}.\end{split}\]</div>
+<p>If we start with a system initially in the <span class="math notranslate nohighlight">\(|+\rangle\)</span> (which is done using the
+Hadamard), then apply multiples of the <span class="math notranslate nohighlight">\(T\)</span> gate and measure in the
+x-basis, we can map out this phase. These experiments are defined by the following eight scores:</p>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Quantum Phase exp 0</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="c1">// None</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Quantum Phase exp 1</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">sdg</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Quantum Phase exp 2</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Quantum Phase exp 3</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Quantum Phase exp 4</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Quantum Phase exp 5</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Quantum Phase exp 6</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Quantum Phase exp 7</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">t</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># quantum_phase.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">Aer</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuits</span>
+<span class="n">circuits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">pre</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">middle</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">meas_x</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">meas_x</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">meas_x</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">meas_x</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">exp_vector</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">circuits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pre</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">+</span> <span class="n">meas_x</span><span class="p">)</span>
+    <span class="n">middle</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuits</span>
+<span class="n">shots</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span> <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Print the result</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">circuits</span><span class="p">[</span><span class="n">exp_index</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">shots</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">shots</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;exp {}: [{}, {}] X length = {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exp_index</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p0</span><span class="o">-</span><span class="n">p1</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+<p>Here, QISKit gives us a nice advantage, as we can simply loop over the different
+circuits.</p>
+<p>The results are summarized in the following table, where X length is the result of
+probability 0 minus probability 1. You can think of it as the length of the x measurement.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 17%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Experiment</p></th>
+<th class="head"><p>Phase angle</p></th>
+<th class="head"><p>Gates</p></th>
+<th class="head"><p>Prob 0</p></th>
+<th class="head"><p>Prob 1</p></th>
+<th class="head"><p>X length</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi/4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>0.8535533</p></td>
+<td><p>0.1464466</p></td>
+<td><p>0.7071067</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^2\)</span></p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><span class="math notranslate nohighlight">\(3\pi/4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^3\)</span></p></td>
+<td><p>0.1464466</p></td>
+<td><p>0.8535533</p></td>
+<td><p>-0.707106</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^4\)</span></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>-1</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p><span class="math notranslate nohighlight">\(5\pi/4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^5\)</span></p></td>
+<td><p>0.1464466</p></td>
+<td><p>0.8535533</p></td>
+<td><p>-0.707106</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p><span class="math notranslate nohighlight">\(3\pi/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^6\)</span></p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p><span class="math notranslate nohighlight">\(7\pi/4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^7\)</span></p></td>
+<td><p>0.8535533</p></td>
+<td><p>0.1464466</p></td>
+<td><p>0.7071067</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note: To get these values, you might need to set the number of shots to be much larger than 1024.</p>
+<p>You have probably noticed that there are additional gates: <span class="math notranslate nohighlight">\(\{Y,Z,S,S^\dagger,\)</span> <span class="math notranslate nohighlight">\(T^\dagger\}\)</span>,
+and a CNOT (that we will touch on later) available in the Composer.
+All of these gates can be built from the <span class="math notranslate nohighlight">\(\{H,T,\)</span> and <span class="math notranslate nohighlight">\(X\}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~S =\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; i \end{pmatrix} := T^2,
+~~~~~~~~Z =\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} := T^4,
+~~~~~~~~S^\dagger =\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -i \end{pmatrix} := T^6,
+~~~~~~~~T^\dagger =\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; e^{-i\pi/4} \end{pmatrix} := T^7\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~Y =\begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix} := XZ\end{split}\]</div>
+<p>The coloring denotes the group properties. All the green gates form a group
+known as the Pauli group, and can be made by <span class="math notranslate nohighlight">\(\{X, Z\}\)</span>. The blue set
+forms a group called the Clifford group, and can be made by
+<span class="math notranslate nohighlight">\(\{H, S\}\)</span> (Note the Pauli group
+can be made using these). The red gates are the non-Clifford gates.</p>
+<p>Now that we have a good understanding of the standard gates, we can define a third basis, the <em>circular</em> (or <span class="math notranslate nohighlight">\(Y\)</span>) basis:
+<span class="math notranslate nohighlight">\(|\circlearrowright\rangle =
+\frac{1}{\sqrt{2}}(|0\rangle+i|1\rangle)\)</span>, <span class="math notranslate nohighlight">\(|\circlearrowleft\rangle
+= \frac{1}{\sqrt{2}}(|0\rangle-i|1\rangle)\)</span>. To make the
+<span class="math notranslate nohighlight">\(|\circlearrowright\rangle\)</span> state from the <span class="math notranslate nohighlight">\(|0 \rangle\)</span> state,
+use a <span class="math notranslate nohighlight">\(H\)</span> gate
+followed by an <span class="math notranslate nohighlight">\(S\)</span> gate. Try to figure out how to
+get the <span class="math notranslate nohighlight">\(|\circlearrowleft\rangle\)</span> on your own.</p>
+<p>To measure in this basis, we must rotate the computation basis
+(<span class="math notranslate nohighlight">\(Z\)</span>) to the circular basis (<span class="math notranslate nohighlight">\(Y\)</span>). To do this, use an <span class="math notranslate nohighlight">\(S^\dagger\)</span>
+followed by <span class="math notranslate nohighlight">\(H\)</span> before your measurement. See below for an example score (the other seven
+would be similar to before) and a QISKit
+example, to map out the quantum phase experiment above projected into the
+circular basis.</p>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Quantum Phase exp 0</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="c1">// None</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">sdg</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># quantum_phase_meas_y.py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">Aer</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuit</span>
+<span class="n">circuits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">pre</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">pre</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">middle</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">meas_y</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">meas_y</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">meas_y</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">.</span><span class="n">inverse</span><span class="p">()</span>
+<span class="n">meas_y</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">meas_y</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">exp_vector</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">circuits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pre</span> <span class="o">+</span> <span class="n">middle</span> <span class="o">+</span> <span class="n">meas_y</span><span class="p">)</span>
+    <span class="n">middle</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+    
+<span class="c1"># Execute the circuits</span>
+<span class="n">shots</span> <span class="o">=</span> <span class="mi">1024</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span> <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Print the result</span>
+<span class="k">for</span> <span class="n">exp_index</span> <span class="ow">in</span> <span class="n">exp_vector</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">circuits</span><span class="p">[</span><span class="n">exp_index</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">shots</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">p0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">shots</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;exp {}: [{}, {}] Y length = {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exp_index</span><span class="p">,</span> <span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p0</span><span class="o">-</span><span class="n">p1</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 17%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Experiment</p></th>
+<th class="head"><p>Phase angle</p></th>
+<th class="head"><p>Gates</p></th>
+<th class="head"><p>Prob 0</p></th>
+<th class="head"><p>Prob 1</p></th>
+<th class="head"><p>Y length</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi/4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>0.8535533</p></td>
+<td><p>0.1464466</p></td>
+<td><p>0.7071067</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^2\)</span></p></td>
+<td><p>1.0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><span class="math notranslate nohighlight">\(3\pi/4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^3\)</span></p></td>
+<td><p>0.8535533</p></td>
+<td><p>0.1464466</p></td>
+<td><p>0.7071067</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^4\)</span></p></td>
+<td><p>0.5</p></td>
+<td><p>0.5</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p><span class="math notranslate nohighlight">\(5\pi/4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^5\)</span></p></td>
+<td><p>0.1464466</p></td>
+<td><p>0.8535533</p></td>
+<td><p>-0.707107</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p><span class="math notranslate nohighlight">\(3\pi/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^6\)</span></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>-1</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p><span class="math notranslate nohighlight">\(7\pi/4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T^7\)</span></p></td>
+<td><p>0.1464466</p></td>
+<td><p>0.8535533</p></td>
+<td><p>-0.707106</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+        </div>
+          
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right">
+            <a href="#">Back to top</a> 
+        </p>
+        <p> &copy;
+            Copyright 2017, IBM Research and the IBM QX team.<br/> Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+        </p>
+    </div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../../_static/theme.css" type="text/css" /> 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <meta charset="utf-8" />
+    <title>Creating Superpositions &#8212; Experience Documentation 2.0 documentation</title>
+<link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../../',
+        VERSION: '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../../_static/jquery.js"></script>
+<script type="text/javascript" src="../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../_static/language_data.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Introducing Qubit Phase" href="003-Introducing_qubit_phase.html" />
+    <link rel="prev" title="The Quantum Bit (Qubit)" href="001-The_Quantum_Bit_(Qubit).html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+
+    <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/plex-font-faces.css" type="text/css" />
+
+</head>
+
+<body>    <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/ibm-q.png"></span>
+          Experience Documentation</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../beginners-guide/introduction.html">Beginners Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">User Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="001-The_Quantum_Bit_(Qubit).html" title="Previous Chapter: The Quantum Bit (Qubit)"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="003-Introducing_qubit_phase.html" title="Next Chapter: Introducing Qubit Phase"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div> 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 breadcrumbs">
+        <ol class="breadcrumb"><li><a href="../introduction.html">User Guide</a></li><li><a href="000-The_Weird_and_Wonderful_World_of_the_Qubit.html">The Weird and Wonderful World of the Qubit</a></li><li class="active">Creating Superpositions</li>
+        </ol>
+        </div>
+    </div>
+    <div class="row">
+<div class="col-md-3">
+    <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Creating Superpositions</a></li>
+</ul>
+
+  <li>
+    <a href="001-The_Quantum_Bit_(Qubit).html" title="Previous Chapter: The Quantum Bit (Qubit)"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="003-Introducing_qubit_phase.html" title="Next Chapter: Introducing Qubit Phase"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/full-user-guide/002-The_Weird_and_Wonderful_World_of_the_Qubit/002-Creating_superpositions.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+    </div>
+</div>
+        <div class="col-md-9 content">
+            
+  <div class="section" id="creating-superpositions">
+<h1>Creating Superpositions<a class="headerlink" href="#creating-superpositions" title="Permalink to this headline">¶</a></h1>
+<p>Up to this point, our system has behaved like a classical bit.
+To go beyond classical behavior, we must explore what it means to make a superposition.
+The operation for generating a superposition
+is the Hadamard gate, <span class="math notranslate nohighlight">\(H\)</span>. In the Composer, this is the
+blue gate labeled <span class="math notranslate nohighlight">\(H\)</span>.</p>
+<p>The simple score to make a superposition is given below. It starts with placing
+the <span class="math notranslate nohighlight">\(H\)</span> gate on one of the qubits (which starts in the <span class="math notranslate nohighlight">\(|0\rangle\)</span> state)
+and a standard measurement. Run the example below.</p>
+<p><strong>Superposition state</strong></p>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Superposition State</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># superposition_state.py</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">Aer</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuit</span>
+<span class="n">superposition_state</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">superposition_state</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">superposition_state</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuit</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">superposition_state</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Print the result</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">superposition_state</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+<p>Did you find that the results give a 0 half the time, and a 1 the rest of the time?
+Indeed, much like flipping a fair coin, the results are close to 50/50
+(running on the real device will give less-than-ideal results, due to noise and errors).</p>
+<p>However, quantum randomness is much different. Let’s see how.  Run the experiment
+again, but this time with two <span class="math notranslate nohighlight">\(H\)</span> gates in succession.
+If we consider the <span class="math notranslate nohighlight">\(H\)</span> gate to be analog to a coin flip, here we would be
+flipping it twice. When you flip a coin twice in a row, you would still expect a 50/50
+distribution. Below is a quantum score for this experiment; run the example.</p>
+<p><strong>Superposition state X-basis</strong></p>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Superposition State in X Basis</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># superposition_state_xbasis.py</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">Aer</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuit</span>
+<span class="n">superposition_state_xbasis</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">superposition_state_xbasis</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">superposition_state_xbasis</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">superposition_state_xbasis</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">superposition_state_xbasis</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuit</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">superposition_state_xbasis</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Print the result</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">superposition_state_xbasis</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+<p>This time, the results are surprising. Unlike the classical case, with
+high probability the outcome is not random, but in the <span class="math notranslate nohighlight">\(|0\rangle\)</span>
+state. Quantum randomness is not simply like a classical random coin flip.
+In both of the above experiments, the system (without noise) is in a definite
+state, but only in the first case does it behave randomly. This is because,
+in the first case, via the <span class="math notranslate nohighlight">\(H\)</span> gate, we make a uniform superposition
+of the ground and excited state,
+<span class="math notranslate nohighlight">\(|+\rangle=(|0\rangle+|1\rangle)/\sqrt{2}\)</span>, but then follow
+it with a measurement in the computational basis. The act of measurement
+in the computational basis forces the system to be in either the
+<span class="math notranslate nohighlight">\(|0\rangle\)</span> state or the <span class="math notranslate nohighlight">\(|1\rangle\)</span> state with an equal
+probability. In the second case,
+we can think of the second <span class="math notranslate nohighlight">\(H\)</span> gate as being part of the final
+measurement operation; it changes the measurement basis from the
+computational basis to a new basis - which we call the superposition basis,
+or x-basis. The experiment confirms this by giving the result 0,
+showing the system is in the <span class="math notranslate nohighlight">\(|+\rangle\)</span> superposition state.</p>
+<p>Before we give the math to explain this, let’s consider two more experiments.
+The first puts the qubit in the excited state, then applies
+the <span class="math notranslate nohighlight">\(H\)</span> gate. The score for this is below; run it and you will see
+that we get the same 50/50 statistics as the first experiment.</p>
+<p><strong>Negative superposition state</strong></p>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Negative Superposition State</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">x</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># negative_superposition_state.py</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">Aer</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuit</span>
+<span class="n">negative_superposition_state</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">negative_superposition_state</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">negative_superposition_state</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">negative_superposition_state</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuit</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">negative_superposition_state</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Print the result</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">negative_superposition_state</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+<p>The second experiment consists of first preparing the qubit in the excited state,
+applying the <span class="math notranslate nohighlight">\(H\)</span> gate (putting it in a superposition), and then measuring in the
+x-basis (another <span class="math notranslate nohighlight">\(H\)</span> gate followed by a measurement). Here we find
+with high probability that the system gives outcome 1. This tells us that
+the state just before the x-basis measurement was a superposition that
+was orthogonal to the <span class="math notranslate nohighlight">\(|+\rangle\)</span> state. By definition, this state has to be
+<span class="math notranslate nohighlight">\(|-\rangle=(|0\rangle-|1\rangle)/\sqrt{2}\)</span>.
+That is, the <span class="math notranslate nohighlight">\(H\)</span> gate transforms the computational basis into a new basis,
+the superposition basis, defined by the set <span class="math notranslate nohighlight">\(\{|+\rangle, |-\rangle\}\)</span>.</p>
+<p><strong>Negative superposition state X-basis</strong></p>
+OpenQasm Input<div class="highlight-c++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//Negative Superposition State X Basis</span>
+<span class="n">OPENQASM</span> <span class="mf">2.0</span><span class="p">;</span>
+<span class="n">include</span> <span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span>
+
+<span class="c1">// Register declarations</span>
+<span class="n">qreg</span> <span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="n">creg</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+
+<span class="c1">// Quantum Circuit</span>
+<span class="n">x</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">barrier</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">h</span> <span class="n">q</span><span class="p">;</span>
+<span class="n">measure</span> <span class="n">q</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<a href="https://qiskit.org"  target="_blank">QISKit</a> example<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># negative_superposition_state_xbasis.py</span>
+<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">QuantumRegister</span><span class="p">,</span> <span class="n">ClassicalRegister</span><span class="p">,</span> <span class="n">execute</span><span class="p">,</span> <span class="n">Aer</span>
+
+<span class="c1"># Define the Quantum and Classical Registers</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Build the circuit</span>
+<span class="n">negative_superposition_state_xbasis</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">negative_superposition_state_xbasis</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">negative_superposition_state_xbasis</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">negative_superposition_state_xbasis</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+<span class="n">negative_superposition_state_xbasis</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+<span class="n">negative_superposition_state_xbasis</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># Execute the circuit</span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">negative_superposition_state_xbasis</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;qasm_simulator&#39;</span><span class="p">),</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+
+<span class="c1"># Print the result</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">(</span><span class="n">negative_superposition_state_xbasis</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+<p>The matrix the represents the <span class="math notranslate nohighlight">\(H\)</span> gate is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~H =\frac{1}{\sqrt{2}}\begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{pmatrix}.\end{split}\]</div>
+<p>Applying this gate to the <span class="math notranslate nohighlight">\(|0\rangle\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~H|0\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{pmatrix}\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix}=|+\rangle,\end{split}\]</div>
+<p>and applying it to the <span class="math notranslate nohighlight">\(|1\rangle\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}~~~~~~~~H|1\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{pmatrix}\begin{pmatrix} 0 \\ 1 \end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix}=|-\rangle.\end{split}\]</div>
+<p>These matrices lead directly to the quantum randomness seen above.
+You have also learnt about quantum superpositions, and that these superpositions
+can have a sign. The main message we would like you to
+take away from this this chapter is:</p>
+<ul class="simple">
+<li><p>a physical system in a definite state can still behave randomly.</p></li>
+</ul>
+<p>This is the first of the two principles from <a class="reference external" href="../001-The_IBM_Qu_Experience/002-The_Quantum_World.html">the Quantum World</a> section.  This needs to become your new intuition, as it is
+what makes quantum systems different to classical systems.</p>
+</div>
+
+
+        </div>
+          
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right">
+            <a href="#">Back to top</a> 
+        </p>
+        <p> &copy;
+            Copyright 2017, IBM Research and the IBM QX team.<br/> Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+        </p>
+    </div>
+</footer>
+</body>
+
+</html>

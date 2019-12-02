@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../../_static/theme.css" type="text/css" /> 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stabilizer Measurements &#8212; Experience Documentation 2.0 documentation</title>
+<link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT: '../../',
+        VERSION: '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE: true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+</script>
+<script type="text/javascript" src="../../_static/jquery.js"></script>
+<script type="text/javascript" src="../../_static/underscore.js"></script>
+<script type="text/javascript" src="../../_static/doctools.js"></script>
+<script type="text/javascript" src="../../_static/language_data.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Contributing" href="../../contributing.html" />
+    <link rel="prev" title="Quantum Repetition Code" href="060-Quantum_Repetition_Code.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+
+    <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/plex-font-faces.css" type="text/css" />
+
+</head>
+
+<body>    <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/ibm-q.png"></span>
+          Experience Documentation</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../beginners-guide/introduction.html">Beginners Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../introduction.html">User Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="060-Quantum_Repetition_Code.html" title="Previous Chapter: Quantum Repetition Code"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../contributing.html" title="Next Chapter: Contributing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div> 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 breadcrumbs">
+        <ol class="breadcrumb"><li><a href="../introduction.html">User Guide</a></li><li><a href="059-Quantum_Error_Correction.html">Quantum Error Correction</a></li><li class="active">Stabilizer Measurements</li>
+        </ol>
+        </div>
+    </div>
+    <div class="row">
+<div class="col-md-3">
+    <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Stabilizer Measurements</a></li>
+</ul>
+
+  <li>
+    <a href="060-Quantum_Repetition_Code.html" title="Previous Chapter: Quantum Repetition Code"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Previous</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../contributing.html" title="Next Chapter: Contributing"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Next &raquo;</span>
+    </a>
+  </li>
+<div id="sourcelink">
+  <a href="../../_sources/full-user-guide/005-Quantum_Error_Correction/061-Stabilizer_Measurements.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+    </div>
+</div>
+        <div class="col-md-9 content">
+            
+  <div class="section" id="stabilizer-measurements">
+<h1>Stabilizer Measurements<a class="headerlink" href="#stabilizer-measurements" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://arxiv.org/abs/quant-ph/9705052">Stabilizer codes</a> are a large
+and important family of quantum error-correcting codes. These codes are
+defined as joint eigenspaces of a collection of operators known as
+<em>stabilizers</em>. The eigenvalues of the stabilizers are used to detect and
+diagnose errors. Therefore, many quantum error-correction protocols make
+<em>stabilizer measurements</em> to obtain these eigenvalues. One way to
+implement a stabilizer measurement is to use extra qubits, known as
+<em>syndrome qubits</em>, to detect errors on <em>data qubits</em> that are part of
+your computation. Stabilizer measurements can identify a collective
+property of a set of data qubits; one such property is the
+qubits’ <em>parity</em>.</p>
+<div class="line-block">
+<div class="line">Consider the quantum bit-flip code again. The bit-flip code is a
+stabilizer code, and one choice for its stabilizers is <span class="math notranslate nohighlight">\(Z\otimes
+Z\otimes I\)</span> and <span class="math notranslate nohighlight">\(I\otimes Z\otimes Z\)</span>. A valid codeword is a <span class="math notranslate nohighlight">\(+1\)</span>
+eigenstate of these stabilizer operators. For <span class="math notranslate nohighlight">\(Z\)</span>-type operators such
+as these, the stabilizer enforces that the parity of the first two
+qubits is even, and the parity of the second two qubits is even. The
+stabilizer measurement tells us whether the parity has changed, which
+we can use to diagnose the error.</div>
+</div>
+<p>In quantum codes such as the <a class="reference external" href="https://en.wikipedia.org/wiki/Toric_code">surface
+code</a>, there are <span class="math notranslate nohighlight">\(Z\)</span>-type
+and <span class="math notranslate nohighlight">\(X\)</span>-type stabilizers to measure. The <span class="math notranslate nohighlight">\(X\)</span>-type stabilizers simply
+enforce a parity constraint in the <span class="math notranslate nohighlight">\(\{|+\rangle,|-\rangle\}\)</span>
+basis. For example, the states <span class="math notranslate nohighlight">\(|++\rangle\)</span> and <span class="math notranslate nohighlight">\(|--\rangle\)</span> are
+<span class="math notranslate nohighlight">\(+1\)</span> eigenstates of <span class="math notranslate nohighlight">\(X\otimes X\)</span>. The <span class="math notranslate nohighlight">\(Z\)</span>-type stabilizers in the bulk
+of the surface code have the form <span class="math notranslate nohighlight">\(Z\otimes Z\otimes Z\otimes Z\)</span> and
+detect bit-flip errors on the four data qubits that are involved. The
+<span class="math notranslate nohighlight">\(X\)</span>-type stabilizers in the bulk have the form <span class="math notranslate nohighlight">\(X\otimes X\otimes
+X\otimes X\)</span> and detect phase-flip errors. These stabilizer measurements
+are implemented by computing the associated bit-flip or phase-flip
+parities into a syndrome qubit.</p>
+<div class="line-block">
+<div class="line">In the Composer, we can test such stabilizer measurements using
+<span class="math notranslate nohighlight">\(Q_2\)</span> as a syndrome qubit, and <span class="math notranslate nohighlight">\(Q_0\)</span>, <span class="math notranslate nohighlight">\(Q_1\)</span>, <span class="math notranslate nohighlight">\(Q_3\)</span>, and
+<span class="math notranslate nohighlight">\(Q_4\)</span> as data qubits. The <span class="math notranslate nohighlight">\(Z\)</span>-type parity check is performed using
+a CNOT gate from each data qubit to the syndrome qubit. The <span class="math notranslate nohighlight">\(X\)</span>-type
+parity check is simply the conjugate of the <span class="math notranslate nohighlight">\(Z\)</span>-type check, obtained
+by applying Hadamard gates to the input and output data qubits. In a
+fault-tolerant implementation of the circuits, the order of gates is
+important to limit the spread of errors.</div>
+</div>
+<p>The scores below prepare different states of input parity. See if the
+processor returns the proper parity measurements.</p>
+<p>When we ran these experiments we got</p>
+<div class="line-block">
+<div class="line"><img alt="image0" src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/images-classroom/PlaquetteWebExp18626ul21g1ra4i.png?raw=true" /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 0000</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/0ef8d525ddb9f739bb8fb4cb4c9d0b81?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-0ef8d525ddb9f739bb8fb4cb4c9d0b81.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/0ef8d525ddb9f739bb8fb4cb4c9d0b81?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 0001</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/7bf1fe8b112a27f1defdd1797e531f4e?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-7bf1fe8b112a27f1defdd1797e531f4e.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/7bf1fe8b112a27f1defdd1797e531f4e?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 0010</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/ac12517d7526a77d19ce104d971ed710?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-ac12517d7526a77d19ce104d971ed710.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/ac12517d7526a77d19ce104d971ed710?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 0011</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/86e01da97076b98d2319178fd250c14b?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-86e01da97076b98d2319178fd250c14b.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/86e01da97076b98d2319178fd250c14b?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 0100</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/4568159e2e0816fb088fec7ee697a61d?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-4568159e2e0816fb088fec7ee697a61d.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/4568159e2e0816fb088fec7ee697a61d?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 0101</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/0ef8d525ddb9f739bb8fb4cb4c9f395e?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-0ef8d525ddb9f739bb8fb4cb4c9f395e.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/0ef8d525ddb9f739bb8fb4cb4c9f395e?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 0110</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/c1908bfce53e5d26b810465dbb768bbb?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-c1908bfce53e5d26b810465dbb768bbb.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/c1908bfce53e5d26b810465dbb768bbb?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 0111</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/7cf716ef5c56be1df8419ec1f2051ebe?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-7cf716ef5c56be1df8419ec1f2051ebe.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/7cf716ef5c56be1df8419ec1f2051ebe?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 1000</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/9d173b5b4a53131382b97843d2fda623?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-9d173b5b4a53131382b97843d2fda623.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/9d173b5b4a53131382b97843d2fda623?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 1001</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/570b68405ba63ca75c724d3f40ab48c2?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-570b68405ba63ca75c724d3f40ab48c2.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/570b68405ba63ca75c724d3f40ab48c2?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 1010</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/0eb40f5d1eed7b2d8fd23c2c8774d0b0?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-0eb40f5d1eed7b2d8fd23c2c8774d0b0.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/0eb40f5d1eed7b2d8fd23c2c8774d0b0?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 1011</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/6769d2329c7fb8be2514f419db59240f?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-6769d2329c7fb8be2514f419db59240f.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/6769d2329c7fb8be2514f419db59240f?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 1100</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/9d173b5b4a53131382b97843d2fc0d75?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-9d173b5b4a53131382b97843d2fc0d75.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/9d173b5b4a53131382b97843d2fc0d75?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 1101</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/c1908bfce53e5d26b810465dbb758199?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-c1908bfce53e5d26b810465dbb758199.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/c1908bfce53e5d26b810465dbb758199?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 1110</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/7bf1fe8b112a27f1defdd1797e5335e7?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-7bf1fe8b112a27f1defdd1797e5335e7.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/7bf1fe8b112a27f1defdd1797e5335e7?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette Z 1111</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/4568159e2e0816fb088fec7ee697b2b1?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-4568159e2e0816fb088fec7ee697b2b1.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/4568159e2e0816fb088fec7ee697b2b1?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Plaquette X +-+-</strong></div>
+</div>
+<a href="https://quantum-computing.ibm.com/composer/ac12517d7526a77d19ce104d971e4e4c?shared=true" target="_parent"><img src="https://github.com/Qiskit/iqx-user-guide/blob/master/images/codes/code-ac12517d7526a77d19ce104d971e4e4c.png?raw=true" style="width: 100%; max-width: 600px;"></a>
+<a href="https://quantum-computing.ibm.com/composer/ac12517d7526a77d19ce104d971e4e4c?shared=true" target="_blank" style="text-align: right; display: block;">Open in composer</a></div>
+
+
+        </div>
+          
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right">
+            <a href="#">Back to top</a> 
+        </p>
+        <p> &copy;
+            Copyright 2017, IBM Research and the IBM QX team.<br/> Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+        </p>
+    </div>
+</footer>
+</body>
+
+</html>
